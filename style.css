@@ -1,0 +1,427 @@
+/* Custom Properties for Rebranding */
+:root {
+    --primary-color: #008080; /* Teal - New Brand Color */
+    --secondary-color: #333;
+    --text-color: #555;
+    --light-bg: #f7f7f7;
+    --white: #fff;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #004d4d; /* Darker Teal */
+}
+
+h1, h2, h3, h4 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #004d4d;
+}
+
+.btn-login {
+    background: none;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.btn-login:hover {
+    background-color: var(--light-bg);
+}
+
+/* 1. Header/Navigation */
+.navbar {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.navbar nav a {
+    margin: 0 15px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+}
+
+/* 2. Hero/Banner Section */
+.hero-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--light-bg);
+}
+
+.promo-text {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.promo-text i {
+    margin-right: 8px;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero-section h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: var(--text-color);
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.search-box input {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+
+.btn-search {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 0;
+}
+
+.btn-search:hover {
+    background-color: #004d4d;
+}
+
+/* Main Content Sections */
+section {
+    padding: 60px 0;
+}
+
+.about-section {
+    text-align: center;
+}
+
+/* 4. Services Section */
+.services-section {
+    background-color: var(--light-bg);
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.services-list li {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.services-list strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 5. Popular Listings Section */
+.listings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.more-link {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.listing-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+}
+
+.listing-card h4 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.listing-card .location {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.listing-card .rating {
+    color: gold;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.listing-card .price {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.listing-card .divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 15px 0;
+}
+
+.listing-card .details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: var(--secondary-color);
+}
+.listing-card .details i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+/* 6. Newsletter/CTA Section */
+.newsletter-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 40px 0;
+}
+
+.newsletter-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter-content h2 {
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.newsletter-content p {
+    margin: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.newsletter-form input {
+    padding: 10px 15px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    min-width: 250px;
+}
+
+.newsletter-form .btn-primary {
+    background-color: var(--secondary-color);
+    border-radius: 0;
+}
+.newsletter-form .btn-primary:hover {
+    background-color: #444;
+}
+
+/* 7. Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 40px 0 20px;
+    font-size: 0.9em;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-brand .logo {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-links-grid h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.footer-links-grid ul {
+    list-style: none;
+}
+
+.footer-links-grid a {
+    color: var(--white);
+    display: block;
+    padding: 3px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    color: #bbb;
+}
+
+.footer-bottom .legal-links a {
+    color: #bbb;
+    margin-left: 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .navbar nav {
+        display: none; /* Hide nav links on smaller screens for simplicity */
+    }
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-links-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .newsletter-section .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+    .navbar .auth-buttons {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+    .search-box {
+        flex-direction: column;
+    }
+    .btn-search {
+        border-radius: 0 0 8px 8px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-bottom .legal-links {
+        margin-top: 10px;
+    }
+  }
